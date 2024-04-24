@@ -16,11 +16,11 @@
             <RouterLink to="/diseases/all"><span class="mx-1 text-sm sm:text-base"> Diseases </span></RouterLink>
           </button>
         </div>
-        <div class="dropdown dropdown-end">
-          <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">
-            <RouterLink to="/recorder"><span class="mx-1 text-sm sm:text-base"> Recorder </span></RouterLink>
-          </button>
-        </div>
+<!--        <div class="dropdown dropdown-end">-->
+<!--          <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">-->
+<!--            <RouterLink to="/recorder"><span class="mx-1 text-sm sm:text-base"> Recorder </span></RouterLink>-->
+<!--          </button>-->
+<!--        </div>-->
         <div class="dropdown dropdown-end">
           <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">
             <RouterLink to="/diagnosis"><span class="mx-1 text-sm sm:text-base"> Diagnosis </span></RouterLink>
@@ -28,14 +28,19 @@
         </div>
         <div class="dropdown dropdown-end">
           <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">
-            <RouterLink to="/users"><span class="mx-1 text-sm sm:text-base"> Users </span></RouterLink>
+            <RouterLink to="/home-page"><span class="mx-1 text-sm sm:text-base"> Home </span></RouterLink>
           </button>
         </div>
-        <div class="dropdown dropdown-end">
-          <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">
-            <RouterLink to="/admin"><span class="mx-1 text-sm sm:text-base"> Admin </span></RouterLink>
-          </button>
-        </div>
+<!--        <div class="dropdown dropdown-end">-->
+<!--          <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">-->
+<!--            <RouterLink to="/users"><span class="mx-1 text-sm sm:text-base"> Users </span></RouterLink>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--        <div class="dropdown dropdown-end">-->
+<!--          <button class="flex items-center h-10 px-2 py-2 -mb-px text-center text-gray-600 bg-transparent border-b-2 border-transparent sm:px-4 -px-1 dark:text-white whitespace-nowrap cursor-base focus:outline-none">-->
+<!--            <RouterLink to="/admin"><span class="mx-1 text-sm sm:text-base"> Admin </span></RouterLink>-->
+<!--          </button>-->
+<!--        </div>-->
         <div class="dropdown dropdown-end">
         </div>
 

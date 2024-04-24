@@ -31,76 +31,76 @@
           <li class="step">Get Results</li>
           <li class="step">View Treatment</li>
         </ul>
-        <p class="tracking-tight font-bold text-violet-500 text-left mb-2 mt-10">
+        <p class="tracking-tight font-bold text-violet-500 text-left mb-2 mt-20">
           <span class="block">Diagnostic Type: </span>
         </p>
         <v-select class=" h-12" v-model="form.type" :options="diagnostic_types"></v-select>
 
-        <template v-if="form.type">
-          <p class="tracking-tight font-bold text-violet-500 text-left mb-2 mt-10">
-            <span class="block">Choose audio file: </span>
-          </p>
+<!--        <template v-if="form.type">-->
+<!--          <p class="tracking-tight font-bold text-violet-500 text-left mb-2 mt-10">-->
+<!--            <span class="block">Choose audio file: </span>-->
+<!--          </p>-->
 
-          <div class="flex mt-10 justify-center">
-            <div class="mr-20 card w-48 bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img src="/from_device.jpg" alt="Device" class="rounded-xl w-22" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <div class="card-actions">
-                  <button @click="from_device = true; from_app = false; record_now = false" class="btn btn-primary">From Device</button>
-                </div>
-              </div>
-            </div>
+<!--          <div class="flex mt-10 justify-center">-->
+<!--            <div class="mr-20 card w-48 bg-base-100 shadow-xl">-->
+<!--              <figure class="px-10 pt-10">-->
+<!--                <img src="/from_device.jpg" alt="Device" class="rounded-xl w-22" />-->
+<!--              </figure>-->
+<!--              <div class="card-body items-center text-center">-->
+<!--                <div class="card-actions">-->
+<!--                  <button @click="from_device = true; from_app = false; record_now = false" class="btn btn-primary">From Device</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <div class="card w-48 bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img src="/recorder.png" alt="Recorder" class="rounded-xl w-22" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <div class="card-actions">
-                  <label for="my-modal-3" @click="from_device = false; from_app = false; record_now = true" class="btn btn-primary">Record Now</label>
-                </div>
-              </div>
-            </div>
+<!--            <div class="card w-48 bg-base-100 shadow-xl">-->
+<!--              <figure class="px-10 pt-10">-->
+<!--                <img src="/recorder.png" alt="Recorder" class="rounded-xl w-22" />-->
+<!--              </figure>-->
+<!--              <div class="card-body items-center text-center">-->
+<!--                <div class="card-actions">-->
+<!--                  <label for="my-modal-3" @click="from_device = false; from_app = false; record_now = true" class="btn btn-primary">Record Now</label>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <div class="ml-20 card w-48 bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img src="/from_app.webp" alt="App" class="rounded-xl w-22" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <div class="card-actions">
-                  <button @click="from_device = false; from_app = true; record_now = false" class="btn btn-primary">From App</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </template>
+<!--            <div class="ml-20 card w-48 bg-base-100 shadow-xl">-->
+<!--              <figure class="px-10 pt-10">-->
+<!--                <img src="/from_app.webp" alt="App" class="rounded-xl w-22" />-->
+<!--              </figure>-->
+<!--              <div class="card-body items-center text-center">-->
+<!--                <div class="card-actions">-->
+<!--                  <button @click="from_device = false; from_app = true; record_now = false" class="btn btn-primary">From App</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </template>-->
 
         <div v-if="from_device">
-          <input v-if="form.type" @change="processFile($event)" type="file" name="waw_file" class="mt-12 file-input file-input-bordered file-input-primary w-full " />
+          <input @change="processFile($event)" type="file" name="waw_file" class="mt-12 file-input file-input-bordered file-input-primary w-full " />
         </div>
 
-        <div v-if="from_app" class="mt-12">
-          <v-select v-model="recording_from_app" class=" h-12" :options="recordings"></v-select>
-        </div>
+<!--        <div v-if="from_app" class="mt-12">-->
+<!--          <v-select v-model="recording_from_app" class=" h-12" :options="recordings"></v-select>-->
+<!--        </div>-->
 
-        <div v-if="record_now">
-          <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-          <div class="modal">
-            <div class="modal-box relative">
-              <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-              <div>
-                <tapir-widget class="no_border" :time="2" :customUpload="upload" buttonColor="mediumpurple"></tapir-widget>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--        <div v-if="record_now">-->
+<!--          <input type="checkbox" id="my-modal-3" class="modal-toggle" />-->
+<!--          <div class="modal">-->
+<!--            <div class="modal-box relative">-->
+<!--              <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>-->
+<!--              <div>-->
+<!--                <tapir-widget class="no_border" :time="2" :customUpload="upload" buttonColor="mediumpurple"></tapir-widget>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
 
         <div class="flex justify-end mb-10">
           <button type="submit" @click="onSubmit()" class="mt-16 relative w-80 inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-white rounded hover:bg-white group">
             <span class="w-48 h-48 rounded rotate-[-40deg] bg-violet-500 absolute bottom-0 left-0 -translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-            <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Get diagnostic</span>
+            <span class="relative w-full text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white">Add Symptoms</span>
           </button>
         </div>
       </template>
@@ -119,7 +119,7 @@ import {useRouter} from "vue-router";
 const router = useRouter();
 const file = ref('');
 const spinner = ref(false);
-const from_device = ref(false);
+const from_device = ref(true);
 const from_app = ref(false);
 const record_now = ref(false);
 const diagnostic_types = ref([{'value': 1, 'label': 'Heart'}, {'value': 2, 'label': 'Lungs'}]);

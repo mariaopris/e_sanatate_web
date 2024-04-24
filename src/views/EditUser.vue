@@ -21,9 +21,9 @@
           <button class="btn bg-blue-900 w-60 mt-2 ml-3" type="button"> Save password</button>
         </div>
 
-        <div class="flex ml-8 mt-60 justify-center">
+        <div class="flex ml-8 mt-60 justify-center space-x-3">
+          <RouterLink class="btn btn-sm w-32 gap-2 bg-gray-400 ml-2" to="/home-page"><span> back  </span></RouterLink>
           <button class="btn btn-sm w-32 gap-2 bg-violet-400" type="submit"> Save </button>
-          <RouterLink class="btn btn-sm w-32 gap-2 bg-gray-400 ml-2" to="/users"><span> back  </span></RouterLink>
         </div>
       </div>
     </form>

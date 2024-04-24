@@ -65,7 +65,7 @@
                 <div v-if="!form.other_affections" class="text-xl">none</div>
               </div>
 
-              <div class="grid grid-cols-3 mt-10 ml-10">
+              <div class="grid grid-cols-3 mt-10 ml-10 space-x-3">
                 <div class="text-xl font-semibold text-gray-600">Date of diagnostic</div>
                 <div class="text-xl font-semibold text-gray-600">Diagnostic Type</div>
                 <div class="text-xl font-semibold text-gray-600">Actions</div>
@@ -83,7 +83,7 @@
                   <button @click="deleteAlarm(item.id)" class="btn btn-ghost btn-xs bg-red-100 mr-2">Delete</button>
                 </div>
               </div>
-              <RouterLink class="btn btn-sm w-32 gap-2 ml-2 mt-5" to="/users">back</RouterLink>
+              <RouterLink class="btn btn-sm w-32 gap-2 ml-2 mt-5" to="/home-page">back</RouterLink>
             </div>
           </div>
         </div>
